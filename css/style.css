@@ -1,0 +1,1246 @@
+
+/* ========================================
+   STRAWBERRY MATCHA BIRTHDAY WEBSITE
+   Made with love by Atha ♡
+======================================== */
+
+/* ========================================
+   1. GOOGLE FONT & RESET
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #e99bb3;
+    --pink-dark: #cf7896;
+    --pink-light: #fce5ec;
+    --pink-soft: #fff0f4;
+
+    --matcha: #91a77b;
+    --matcha-dark: #657d58;
+    --matcha-light: #e7eedf;
+
+    --cream: #fffaf1;
+    --cream-dark: #f7efdf;
+
+    --text: #65545a;
+    --text-light: #927b83;
+    --white: #ffffff;
+
+    --shadow: 0 12px 35px rgba(164, 112, 128, 0.12);
+    --radius: 22px;
+}
+
+/* ========================================
+   2. BODY & BACKGROUND
+======================================== */
+
+body {
+    min-height: 100vh;
+    padding: 45px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background:
+        radial-gradient(circle at 10% 15%, #fce3eb 0, transparent 30%),
+        radial-gradient(circle at 90% 85%, #e5eddc 0, transparent 30%),
+        linear-gradient(135deg, #fff8f4, #fff1f3, #f5f5e9);
+
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+}
+
+/* ========================================
+   3. MAIN CONTAINER
+======================================== */
+
+.welcome-container {
+    width: 100%;
+    max-width: 850px;
+    min-height: 500px;
+
+    margin: 25px auto;
+    padding: 48px 45px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ========================================
+   4. TOP LABEL
+======================================== */
+
+.top-label {
+    margin-bottom: 20px;
+
+    color: var(--pink-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   5. MAIN ILLUSTRATION
+======================================== */
+
+.main-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    margin-bottom: 20px;
+
+    font-size: 43px;
+}
+
+.main-illustration span {
+    display: inline-block;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.main-illustration span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.main-illustration span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.main-cake {
+    font-size: 65px;
+}
+
+/* ========================================
+   6. DATE & SMALL HEADING
+======================================== */
+
+.small-heading {
+    margin-bottom: 13px;
+
+    color: var(--matcha-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* ========================================
+   7. MAIN TITLE
+======================================== */
+
+.welcome-container h1 {
+    margin-bottom: 18px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 6vw, 54px);
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: var(--text);
+}
+
+.welcome-container h1 span {
+    color: var(--pink-dark);
+}
+
+.welcome-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* ========================================
+   8. DIVIDER
+======================================== */
+
+.divider,
+.memory-divider,
+.wishes-divider {
+    margin: 10px 0 25px;
+
+    color: var(--pink);
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+/* ========================================
+   9. DESCRIPTION
+======================================== */
+
+.welcome-description {
+    max-width: 440px;
+
+    margin: 12px auto 18px;
+
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ========================================
+   10. LITTLE MESSAGE
+======================================== */
+
+.little-message {
+    margin: 12px 0 25px;
+
+    color: var(--matcha-dark);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ========================================
+   11. OPEN BUTTON
+======================================== */
+
+.open-button {
+    min-width: 205px;
+
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--pink-dark)
+    );
+
+    color: var(--white);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(207, 120, 150, 0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.open-button span {
+    margin-left: 7px;
+}
+
+.open-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(207, 120, 150, 0.35);
+}
+
+.open-button:active {
+    transform: scale(0.96);
+}
+
+/* ========================================
+   12. BOTTOM NOTE
+======================================== */
+
+.bottom-note {
+    margin-top: 30px;
+
+    color: #b69ca4;
+    font-size: 10px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   13. FLOATING DECORATIONS
+======================================== */
+
+.decoration {
+    position: fixed;
+    z-index: 1;
+
+    pointer-events: none;
+    user-select: none;
+
+    opacity: 0.65;
+}
+
+.strawberry {
+    font-size: 35px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.strawberry-one {
+    top: 12%;
+    left: 7%;
+}
+
+.strawberry-two {
+    right: 8%;
+    bottom: 13%;
+
+    animation-delay: 1s;
+}
+
+.matcha-one {
+    top: 20%;
+    right: 10%;
+
+    font-size: 38px;
+    animation: floating 5s ease-in-out infinite;
+}
+
+.flower {
+    color: var(--pink);
+    font-size: 35px;
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+.flower-one {
+    bottom: 12%;
+    left: 10%;
+}
+
+.flower-two {
+    top: 65%;
+    right: 5%;
+
+    animation-delay: 1.5s;
+}
+
+/* ========================================
+   14. ANIMATIONS
+======================================== */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes giftBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-12px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(-3deg);
+    }
+}
+
+@keyframes revealPop {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* ========================================
+   15. PAGE TRANSITION
+======================================== */
+
+.fade-out {
+    animation: fadeOut 0.6s ease forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* ========================================
+   16. MEMORY PAGE
+======================================== */
+
+.memory-page {
+    max-width: 900px;
+    justify-content: flex-start;
+}
+
+.memory-title {
+    margin-bottom: 10px !important;
+}
+
+.memory-description {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   17. PHOTO GRID
+======================================== */
+
+.memory-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+
+    margin: 10px 0 25px;
+}
+
+.polaroid {
+    padding: 10px 10px 16px;
+
+    background: var(--white);
+    border-radius: 5px;
+
+    box-shadow: 0 5px 18px rgba(110, 85, 93, 0.12);
+
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.polaroid:hover {
+    z-index: 2;
+    transform: rotate(0deg) translateY(-7px) scale(1.04);
+
+    box-shadow: 0 12px 25px rgba(110, 85, 93, 0.2);
+}
+
+.polaroid img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+}
+
+.polaroid p {
+    margin-top: 12px;
+
+    color: var(--text-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* ========================================
+   18. MEMORY FOOTER
+======================================== */
+
+.memory-footer {
+    margin: 5px 0 20px;
+
+    color: var(--matcha-dark);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ========================================
+   19. MEMORY NAVIGATION
+======================================== */
+
+.memory-navigation,
+.letter-navigation,
+.wishes-navigation,
+.surprise-navigation {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.back-button {
+    min-width: 120px;
+
+    padding: 13px 20px;
+
+    border: 1px solid #e8c6d1;
+    border-radius: 50px;
+
+    background: #fff8fa;
+    color: var(--pink-dark);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: var(--pink-light);
+    transform: translateY(-3px);
+}
+
+.back-button:active {
+    transform: scale(0.96);
+}
+
+/* ========================================
+   20. LETTER PAGE
+======================================== */
+
+.letter-page {
+    max-width: 800px;
+    justify-content: flex-start;
+}
+
+.letter-title {
+    margin-bottom: 5px !important;
+}
+
+.letter-decoration {
+    margin: 5px 0 15px;
+
+    font-size: 38px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.letter-paper {
+    width: 100%;
+
+    padding: 35px 40px;
+
+    text-align: left;
+
+    background: linear-gradient(
+        145deg,
+        #fffdf8,
+        #fff8f0
+    );
+
+    border: 1px solid #f0e5d8;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(133, 104, 82, 0.08);
+}
+
+.letter-date {
+    margin-bottom: 22px;
+
+    color: #b39a8b;
+    font-size: 11px;
+    font-style: italic;
+    text-align: right;
+}
+
+.letter-paper h2 {
+    margin-bottom: 22px;
+
+    color: var(--pink-dark);
+    font-size: 21px;
+}
+
+.letter-content p {
+    margin-bottom: 17px;
+
+    color: #75636a;
+    font-size: 13px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.letter-signature {
+    margin-top: 25px;
+
+    color: var(--matcha-dark);
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.letter-signature span {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 22px;
+}
+
+/* ========================================
+   21. LITTLE WISHES PAGE
+======================================== */
+
+.wishes-page {
+    max-width: 900px;
+    justify-content: flex-start;
+}
+
+.wishes-title {
+    margin-bottom: 10px !important;
+}
+
+.wishes-description {
+    max-width: 500px;
+
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.wishes-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+
+    margin: 10px 0 25px;
+}
+
+.wish-card {
+    min-height: 190px;
+
+    padding: 22px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: linear-gradient(
+        145deg,
+        #fff8fa,
+        #fffdf8
+    );
+
+    border: 1px solid #f5e2e8;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(164, 112, 128, 0.07);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wish-card:nth-child(even) {
+    background: linear-gradient(
+        145deg,
+        #f5f8ef,
+        #fffdf8
+    );
+
+    border-color: #e5ecd9;
+}
+
+.wish-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 22px rgba(164, 112, 128, 0.13);
+}
+
+.wish-icon {
+    margin-bottom: 12px;
+
+    font-size: 31px;
+}
+
+.wish-card h2 {
+    margin-bottom: 9px;
+
+    color: var(--pink-dark);
+    font-size: 15px;
+}
+
+.wish-card p {
+    color: var(--text-light);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.wishes-ending {
+    width: 100%;
+
+    margin: 5px 0 20px;
+    padding: 23px 15px;
+
+    background: var(--matcha-light);
+    border-radius: 18px;
+}
+
+.wishes-ending p {
+    margin-bottom: 7px;
+
+    color: var(--matcha-dark);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.wishes-ending h2 {
+    margin-bottom: 12px;
+
+    color: var(--matcha-dark);
+    font-size: 20px;
+}
+
+.wishes-ending span {
+    font-size: 20px;
+}
+
+/* ========================================
+   22. ONE LAST SURPRISE PAGE
+======================================== */
+
+.surprise-page {
+    max-width: 750px;
+    justify-content: flex-start;
+}
+
+.surprise-page .main-illustration {
+    margin-top: 5px;
+}
+
+.surprise-page h1 {
+    margin-bottom: 10px;
+}
+
+.surprise-page > h2 {
+    margin-bottom: 8px;
+
+    color: var(--matcha-dark);
+    font-size: 23px;
+}
+
+.surprise-page .welcome-description {
+    margin-top: 5px;
+}
+
+/* ========================================
+   23. INTERACTIVE GIFT BOX
+======================================== */
+
+.gift-box-button {
+    width: 175px;
+    min-height: 175px;
+
+    margin: 5px auto 20px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border: 2px dashed #e9a9bd;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        145deg,
+        #fff0f5,
+        #fffaf0
+    );
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(207, 120, 150, 0.13);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-box-button:hover {
+    transform: translateY(-7px) scale(1.04);
+
+    box-shadow: 0 14px 30px rgba(207, 120, 150, 0.22);
+}
+
+.gift-box-button:active {
+    transform: scale(0.95);
+}
+
+.gift-emoji {
+    display: block;
+
+    font-size: 75px;
+    line-height: 1;
+
+    animation: giftBounce 2.5s ease-in-out infinite;
+}
+
+.gift-hint {
+    color: var(--pink-dark);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   24. GIFT REVEAL
+======================================== */
+
+.gift-reveal {
+    width: 100%;
+
+    margin: 5px 0 25px;
+    padding: 30px 28px;
+
+    background: linear-gradient(
+        145deg,
+        #fff0f5,
+        #fffaf1,
+        #f1f5e9
+    );
+
+    border: 1px solid #f0dce3;
+    border-radius: 23px;
+
+    box-shadow: 0 10px 30px rgba(164, 112, 128, 0.1);
+
+    animation: revealPop 0.7s ease both;
+}
+
+.gift-reveal[hidden] {
+    display: none;
+}
+
+.gift-reveal-icon {
+    margin-bottom: 15px;
+
+    font-size: 50px;
+
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.gift-reveal h2 {
+    margin-bottom: 17px;
+
+    color: var(--pink-dark);
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.gift-reveal p {
+    max-width: 480px;
+
+    margin: 0 auto 15px;
+
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.gift-final-message {
+    margin-top: 22px;
+
+    color: var(--matcha-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.gift-final-decoration {
+    margin-top: 20px;
+
+    font-size: 23px;
+    letter-spacing: 8px;
+}
+
+/* ========================================
+   25. SURPRISE NAVIGATION
+======================================== */
+
+.surprise-navigation {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.surprise-navigation .back-button {
+    min-width: 180px;
+}
+
+/* ========================================
+   26. GENERAL SCROLLING
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+.welcome-container {
+    overflow-wrap: break-word;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--matcha);
+    outline-offset: 4px;
+}
+
+/* ========================================
+   27. RESPONSIVE TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .welcome-container {
+        max-width: 650px;
+        padding: 38px 28px;
+    }
+
+    .memory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .wishes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .letter-paper {
+        padding: 30px;
+    }
+
+    .strawberry-one {
+        left: 3%;
+    }
+
+    .strawberry-two {
+        right: 3%;
+    }
+
+    .matcha-one {
+        right: 4%;
+    }
+}
+
+/* ========================================
+   28. RESPONSIVE MOBILE
+======================================== */
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 15px 12px;
+    }
+
+    .welcome-container {
+        width: 100%;
+        min-height: 450px;
+
+        margin: 12px auto;
+        padding: 32px 20px;
+
+        border-radius: 23px;
+    }
+
+    .top-label {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .main-illustration {
+        gap: 15px;
+        font-size: 34px;
+    }
+
+    .main-cake {
+        font-size: 53px;
+    }
+
+    .welcome-container h1 {
+        font-size: 36px;
+    }
+
+    .welcome-description {
+        font-size: 12px;
+    }
+
+    .small-heading {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .open-button {
+        min-width: 180px;
+        padding: 14px 20px;
+        font-size: 11px;
+    }
+
+    .bottom-note {
+        font-size: 9px;
+    }
+
+    .memory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px;
+    }
+
+    .polaroid {
+        padding: 8px 8px 13px;
+    }
+
+    .polaroid p {
+        font-size: 10px;
+    }
+
+    .memory-description,
+    .wishes-description {
+        font-size: 11px;
+    }
+
+    .letter-paper {
+        padding: 24px 19px;
+    }
+
+    .letter-paper h2 {
+        font-size: 18px;
+    }
+
+    .letter-content p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .letter-signature {
+        font-size: 11px;
+    }
+
+    .wishes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .wish-card {
+        min-height: 180px;
+        padding: 18px 12px;
+    }
+
+    .wish-card h2 {
+        font-size: 13px;
+    }
+
+    .wish-card p {
+        font-size: 10px;
+    }
+
+    .wishes-ending h2 {
+        font-size: 17px;
+    }
+
+    .gift-box-button {
+        width: 155px;
+        min-height: 155px;
+    }
+
+    .gift-emoji {
+        font-size: 65px;
+    }
+
+    .gift-reveal {
+        padding: 25px 18px;
+    }
+
+    .gift-reveal h2 {
+        font-size: 21px;
+    }
+
+    .gift-reveal p {
+        font-size: 12px;
+    }
+
+    .gift-final-message {
+        font-size: 18px;
+    }
+
+    .memory-navigation,
+    .letter-navigation,
+    .wishes-navigation {
+        gap: 10px;
+    }
+
+    .back-button {
+        min-width: 105px;
+        padding: 12px 13px;
+        font-size: 10px;
+    }
+
+    .memory-navigation .open-button,
+    .letter-navigation .open-button,
+    .wishes-navigation .open-button {
+        min-width: 135px;
+        padding: 12px 13px;
+        font-size: 10px;
+    }
+
+    .strawberry,
+    .flower {
+        font-size: 24px;
+    }
+
+    .matcha-one {
+        font-size: 27px;
+    }
+}
+
+/* ========================================
+   29. SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 10px 8px;
+    }
+
+    .welcome-container {
+        padding: 28px 15px;
+    }
+
+    .welcome-container h1 {
+        font-size: 31px;
+    }
+
+    .memory-grid {
+        gap: 13px;
+    }
+
+    .wishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wish-card {
+        min-height: 150px;
+        padding: 20px 17px;
+    }
+
+    .wish-card p {
+        max-width: 250px;
+        font-size: 11px;
+    }
+
+    .memory-navigation,
+    .letter-navigation,
+    .wishes-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .memory-navigation .open-button,
+    .letter-navigation .open-button,
+    .wishes-navigation .open-button {
+        min-width: 145px;
+    }
+
+    .letter-paper {
+        padding: 21px 16px;
+    }
+
+    .letter-content p {
+        font-size: 11px;
+    }
+
+    .gift-reveal {
+        padding: 23px 14px;
+    }
+}
+
+/* ========================================
+   30. ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
